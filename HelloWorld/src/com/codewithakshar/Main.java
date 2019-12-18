@@ -16,8 +16,8 @@ public class Main {
        double interestRate = Double.parseDouble(scanner.nextLine().trim());
        System.out.print("Period (Years): ");
        int years = Integer.parseInt(scanner.nextLine().trim());
-       double monthlyInterestRate = (interestRate/100) / 12;
-       double rn = Math.pow((1 + monthlyInterestRate), years);
+       double monthlyInterestRate = interestRate / 100 / 12;
+       double rn = Math.pow((1 + monthlyInterestRate), years * 12);
        double upperEquation = monthlyInterestRate * rn;
        double lowerEquation = rn - 1;
        double mortgage = principal * (upperEquation / lowerEquation);
